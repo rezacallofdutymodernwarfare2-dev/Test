@@ -60,3 +60,62 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.menu-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.menu-btn {
+    width: 200px;
+    padding: 12px 0;
+    margin: 10px 0;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background: #00aaff;
+    color: white;
+    transform: translateY(-3px);
+}
+
+p{
+    width: 180px;
+
+    padding: 30px;
+
+    margin: 20px auto;
+
+    text-align: center;
+
+    font-size: 24px;
+
+    border-radius: 15px;
+
+    border: 2px solid #ccc;
+}
+
+#first {
+    background-color: #f5c6cb;
+}
+
+#second {
+    background-color: #c3f0c7;
+}
+
+#third {
+    background-color: #d6e4ff;
+}
