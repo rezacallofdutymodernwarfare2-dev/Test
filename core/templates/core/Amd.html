@@ -19,6 +19,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            background: #f1f1f1;
         }
 
         /* نوار بالایی */
@@ -36,7 +37,37 @@
         .navbar {
             display: flex;
             gap: 18px;
+            position: sticky;
+            top: 0;
+            background: #222;
+            padding: 20px;
+            text-align: center;
+            z-index: 100;
         }
+
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 17px;
+        }
+
+        nav a:hover{
+            color: cyan;
+        }
+
+        .main{
+            height: 450px;
+            background-image: url(https://picsum.photos/1920/1080?random=5);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+            font-size: 35px;
+        }
+
 
         .header a {
             color: white;
@@ -48,6 +79,12 @@
             display: flex;
             flex: 1;
             min-height: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .container h2{
+            margin-bottom: 30px;
         }
 
         .main {
@@ -62,6 +99,45 @@
             font-size: 22px;
             color: #111;
         }
+
+        .cards{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card{
+            width: 300px;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .card h3{
+            color: cyan;
+            background: rgba(red, green, blue, alpha);
+            width: 100%;
+            padding: 15px;
+        }
+
+        .image1{
+            background-image: url(https://picsum.photos/1920/1080?random=5);
+        }
+
+        .image2{
+            background-image: url(https://picsum.photos/1920/1080?random=6);
+        }
+
+        .image3{
+            background-image: url(https://picsum.photos/1920/1080?random=7);
+        }
+
 
         /* منوی سمت راست */
         .sidebar {
@@ -96,7 +172,7 @@
             font-size: 10px;
         }
 
-        /* نمایش بهتر در موبایل */
+    
         @media (max-width: 600px) {
             .header {
                 padding: 0 8px;
@@ -126,7 +202,7 @@
             لوگوی سایت
         </div>
 
-        <nav class="navbar">
+        <nav class="navbar" id="about">
             <a href="#">خانه</a>
             <a href="#">محصولات</a>
             <a href="#">درباره ما</a>
@@ -149,6 +225,26 @@
             <a href="#">پیام‌ها</a>
             <a href="#">خروج</a>
         </aside>
+
+    </div>
+
+    <div class="container-2" id="images">
+        <h2>گالری تصاویر</h2>
+
+        <div class="cards">
+
+            <div class="card image1">
+                <h3>تصویر اول</h3>
+            </div>
+
+            <div class="card image2">
+                <h3>تصویر دوم</h3>
+            </div>
+
+            <div class="card image3">
+                <h3>تصویر سوم</h3>
+            </div>
+        </div>
 
     </div>
 
