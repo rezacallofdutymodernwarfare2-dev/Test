@@ -26,7 +26,7 @@
         <h1>Explore THE WORLD</h1>
 
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           American Dream
         </p>
 
         <button class="btn">GET STARTED</button>
@@ -40,10 +40,30 @@
     <button class="menu-btn">Contact</button>
     <button class="menu-btn">Login</button>
     </section>
-    
-    <p id="first">پاراگراف اول</p>
-    <p id="second">پاراگراف دوم</p>
-    <p id="third">پاراگراف سوم</p>
-      
+
+    <section class="login-section">
+        <h2>Login Form</h2>
+
+        <form method="POST" class="login-form">
+            {% csrf_token %}
+
+            <div class="form-row">
+                <label for="id_username">Username</label>
+                {{ form.username }}
+            </div>
+
+            <div class="form-row">
+                <label for="id_password">Password</label>
+                {{ form.password }}
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+            <p class="message">{{ message }}</p>
+        </form>
+    </section>
+         
 </body>
 </html>
