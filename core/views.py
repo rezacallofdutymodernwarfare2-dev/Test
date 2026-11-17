@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from core.forms import *
 from django.contrib.auth import authenticate,login
+from django.db import connection
 
 # Create your views here.
 
@@ -34,4 +35,16 @@ def login_view(request):
     return render(request, "core/login.html", {
         "form": form,
         "message": message
+    })
+
+def users_view(request):
+
+    with connection.cursor() as cursor:
+
+        cursor.execute("SELECT * FROM users")
+
+        users = cursor.fetchall()
+
+    return render(request, 'core/users.html', {
+        'users': users
     })
